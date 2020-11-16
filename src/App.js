@@ -1,12 +1,7 @@
 import React from 'react';
 import './App.css';
 import siteLogo from './img/Sitelogo.jpg';
-
-import Swiper from 'swiper';
-import 'swiper/swiper-bundle.min.css';
-
-
-
+import SliderOne from './components/SliderOne/SliderOne.js';
 
 class App extends React.Component {
     constructor(props){
@@ -25,13 +20,6 @@ class App extends React.Component {
       isHovered: false
     });
   }
-
-
-  componentDidMount(){
-    this.swiper=new Swiper('.swiper-container',{...})
-    //add necessary parameters required by checking the offical docs of swiper
-  }
-
 
   render(){
     return(
@@ -56,7 +44,6 @@ class App extends React.Component {
                 ):(
                   <div/>
                 )}
-                
               </div> 
               <nav className="navHead">
                 <ul>
@@ -92,15 +79,7 @@ class App extends React.Component {
               </div>
             </div>
             <div className="mainSliderOne">
-              <img className="Logo" src={siteLogo}></img>
-              <div className="swiper-container">
-                <div className="swiper-wrapper">
-                  <div className="swiper-slide">Slide 1</div>
-                  <div className="swiper-slide">Slide 1</div>
-                  <div className="swiper-slide">Slide 1</div>
-                  <div className="swiper-slide">Slide 1</div>
-                </div>
-              </div>
+              <SliderOne />
             </div>
           </div>
       </div>
