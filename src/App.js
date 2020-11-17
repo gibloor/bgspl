@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import siteLogo from './img/Sitelogo.jpg';
 import SliderOne from './components/SliderOne/SliderOne.js';
+import SliderTwo from './components/SliderTwo/SliderTwo.js';
 
 class App extends React.Component {
     constructor(props){
@@ -80,6 +81,39 @@ class App extends React.Component {
             </div>
             <div className="mainSliderOne">
               <SliderOne />
+            </div>
+          </div>
+          <div className="newsBlock">
+            <div className="newsBlockMini">
+              <div className="newsTitle">
+                Новости
+              </div>
+              <div className="newsTitleList">
+                <ul>
+                    <li><a href="">Все</a></li>
+                    <li><a href="">Новости</a></li>
+                    <li><a href="">События</a></li>
+                    <li><a href="">Анонсы</a></li>
+                    <li><a href="">Достижения</a></li>
+                    <li><a href="">Наука</a></li>
+                    <li><a href="">Студенческая жизнь</a></li>
+                    <li><a href="">Международные связи</a></li>
+                    <li><a href="">Поступающим</a></li>
+                </ul>
+              </div>
+              <div className="newsMainBlock">
+                <div className="newsMainBlockLeft">
+                  <div className="newsSlider">
+                  <SliderTwo />
+                  </div>
+                  <div>
+
+                  </div>
+                </div>
+                <div className="newsMainBlockRight">
+
+                </div>
+              </div>
             </div>
           </div>
       </div>

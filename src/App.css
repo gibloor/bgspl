@@ -134,4 +134,47 @@ height: 100px;
 .blockLogo{
   float:left;
 }
-
+.newsBlock{
+  width:100%;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.newsBlockMini{
+  width:100%;
+  max-width:1350px;
+}
+.newsTitle{
+  font-size:30pt;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 20px;
+}
+.newsTitleList{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsTitleList li {
+  display: inline-block;
+  padding-right: 15px;
+  padding-left: 15px;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+.newsTitleList a{
+  color:blue;
+  font-weight: bold;
+}
+.newsMainBlock{
+  width:100%;
+  display:flex;
+}
+.newsMainBlockLeft{
+  max-width: calc(100% - 300px);
+}
+.newsMainBlockRight{
+  width: 300px;
+}
