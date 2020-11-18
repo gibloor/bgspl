@@ -3,6 +3,7 @@ import './App.css';
 import siteLogo from './img/Sitelogo.jpg';
 import SliderOne from './components/SliderOne/SliderOne.js';
 import SliderTwo from './components/SliderTwo/SliderTwo.js';
+import SliderVideos from './components/SliderVideos/SliderVideos.js';
 
 class App extends React.Component {
     constructor(props){
@@ -97,7 +98,6 @@ class App extends React.Component {
                     <li><a href="">Достижения</a></li>
                     <li><a href="">Наука</a></li>
                     <li><a href="">Студенческая жизнь</a></li>
-                    <li><a href="">Международные связи</a></li>
                     <li><a href="">Поступающим</a></li>
                 </ul>
               </div>
@@ -106,15 +106,57 @@ class App extends React.Component {
                   <div className="newsSlider">
                   <SliderTwo />
                   </div>
-                  <div>
-
+                  <div className="newsEventsList">
+                    <div className="newsEvents">
+                      <div className="newsEventsImg"></div>
+                      <div className="newsEventsText">
+                      Книжная выставка «Беларусь i ЮНЕСКА – шлях да мiру праз зблiжэнне культур i ведаў» открылась в БГУ
+                      </div>
+                    </div>
+                    <div className="newsEvents">
+                      <div className="newsEventsImg"></div>
+                      <div className="newsEventsText">
+                      Книжная выставка «Беларусь i ЮНЕСКА – шлях да мiру праз зблiжэнне культур i ведаў» открылась в БГУ
+                      </div>
+                    </div>
+                    <div className="newsEvents">
+                      <div className="newsEventsImg"></div>
+                      <div className="newsEventsText">
+                      Книжная выставка «Беларусь i ЮНЕСКА – шлях да мiру праз зблiжэнне культур i ведаў» открылась в БГУ
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="newsMainBlockRight">
-
+                  <div className="newsPillar">Команда БГУ заняла первое место в Республиканском гражданско-патриотическом марафоне «Вместе – за сильную и процветающую Беларусь!»</div>
+                  <div className="newsPillar">Команда БГУ заняла первое место в Республиканском гражданско-патриотическом марафоне «Вместе – за сильную и процветающую Беларусь!»</div>
+                  <div className="newsPillar">Команда БГУ заняла первое место в Республиканском гражданско-патриотическом марафоне «Вместе – за сильную и процветающую Беларусь!»</div>
+                  <div className="newsPillar">Команда БГУ заняла первое место в Республиканском гражданско-патриотическом марафоне «Вместе – за сильную и процветающую Беларусь!»</div>
+                  <div className="newsPillar">Команда БГУ заняла первое место в Республиканском гражданско-патриотическом марафоне «Вместе – за сильную и процветающую Беларусь!»</div>
+                  <div className="newsPillar">Команда БГУ заняла первое место в Республиканском гражданско-патриотическом марафоне «Вместе – за сильную и процветающую Беларусь!»</div>
+                  <div className="newsPillar">Команда БГУ заняла первое место в Республиканском гражданско-патриотическом марафоне «Вместе – за сильную и процветающую Беларусь!»</div>
                 </div>
               </div>
             </div>
+          </div>
+          <div className="blockVideo">
+            <div className='verticalText'>Видео</div>
+            <div className="sectionsVideo">
+              <ul>
+                <li><a href="">Видеотека ректора</a></li>
+                <li><a href="">БГСПЛ. Память сердца</a></li>
+                <li><a href="">Абитуриентам БГСПЛ</a></li>
+                <li><a href="">Мероприятия</a></li>
+                <li><a href="">Наука и производство</a></li>
+                <li><a href="">Креативное образование</a></li>
+                <li><a href="">Иностранные студенты о БГСПЛ</a></li>                  
+                <li><a href="">Выпускники о БГСПЛ</a></li>
+              </ul>
+            </div>
+            <div className='sliderVideos'>
+              <SliderVideos />
+            </div>
+            
           </div>
       </div>
     )
