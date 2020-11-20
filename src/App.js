@@ -10,6 +10,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       isHovered: false,
+      isClicked: false,
     };
   }
   handleEnter(){
@@ -22,10 +23,26 @@ class App extends React.Component {
       isHovered: false
     });
   }
-
+  handleClick(i){
+    this.setState({
+      isClicked: !this.state.isClicked,
+      isWhatClicked: i
+    });
+  }
+  className=this.className;
   render(){
     return(
-      <div className="allDiv">
+      <div  className="allDiv" >
+
+        {this.state.isClicked ? (
+          <div className="blue">
+            <p>ada</p><p>adad</p>
+          </div>
+        ):(
+          <div/>
+          )
+        }
+
           <div className="siteHead">
             <div className="headText">
               <div
@@ -42,23 +59,26 @@ class App extends React.Component {
                       <li><a href="">BY</a></li>
                       <li><a href="">EN</a></li>
                     </ul>
-                </nav>
-                ):(
-                  <div/>
-                )}
+                  </nav>
+                  ):
+                  (
+                    <div/>
+                  )
+                }
               </div> 
               <nav className="navHead">
-                <ul>
-                  <li><a href="">Специальности</a></li>
-                  <li><a href="">Студентам</a></li>
-                  <li><a href="">Сотрудникам</a></li>
-                  <li><a href="">Выпускникам</a></li>
-                  <li><a href="">Партнёрам</a></li>
-                  <li><a href="">Креативное образование</a></li>
-                  <li><a href="">Одно окно</a></li>
-                  <li><a href=""></a>📞</li>
+                <ul onClick={this.handleClick.bind(this)}>
+                  <li>Специальности</li>
+                  <li>Студентам</li>
+                  <li>Сотрудникам</li>
+                  <li>Выпускникам</li>
+                  <li>Партнёрам</li>
+                  <li>Креативное образование</li>
+                  <li>Одно окно</li>
+                  <li>📞</li>
                 </ul>
               </nav>
+
             </div>
           </div>
           <div className="mainAreaOne">
@@ -139,24 +159,25 @@ class App extends React.Component {
               </div>
             </div>
           </div>
-          <div className="blockVideo">
-            <div className='verticalText'>Видео</div>
-            <div className="sectionsVideo">
-              <ul>
-                <li><a href="">Видеотека ректора</a></li>
-                <li><a href="">БГСПЛ. Память сердца</a></li>
-                <li><a href="">Абитуриентам БГСПЛ</a></li>
-                <li><a href="">Мероприятия</a></li>
-                <li><a href="">Наука и производство</a></li>
-                <li><a href="">Креативное образование</a></li>
-                <li><a href="">Иностранные студенты о БГСПЛ</a></li>                  
-                <li><a href="">Выпускники о БГСПЛ</a></li>
-              </ul>
+          <div className="blockVideoBoss">
+            <div className="blockVideo">
+              <div className='verticalText'>Видео</div>
+              <div className="sectionsVideo">
+                <ul>
+                  <li><a href="">Видеотека ректора</a></li>
+                  <li><a href="">БГСПЛ. Память сердца</a></li>
+                  <li><a href="">Абитуриентам БГСПЛ</a></li>
+                  <li><a href="">Мероприятия</a></li>
+                  <li><a href="">Наука и производство</a></li>
+                  <li><a href="">Креативное образование</a></li>
+                  <li><a href="">Иностранные студенты о БГСПЛ</a></li>                  
+                  <li><a href="">Выпускники о БГСПЛ</a></li>
+                </ul>
+              </div> 
+              <div className='sliderVideos'>
+                <SliderVideos />
+              </div>
             </div>
-            <div className='sliderVideos'>
-              <SliderVideos />
-            </div>
-            
           </div>
       </div>
     )
