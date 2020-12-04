@@ -4,36 +4,36 @@ import siteLogo from './img/Sitelogo.jpg';
 import SliderOne from './components/SliderOne/SliderOne.js';
 import SliderTwo from './components/SliderTwo/SliderTwo.js';
 import SliderVideos from './components/SliderVideos/SliderVideos.js';
+import HeaderMenu from './components/HeaderMenu/HeaderMenu.js';
 
 class App extends React.Component {
-    constructor(props){
+    constructor(props) {
     super(props);
+
     this.state = {
       isHovered: false,
       isClicked: false,
     };
   }
-  handleEnter(){
+  handleEnter = () => {
     this.setState({
       isHovered: true
     });
   }
-  handleLeave(){
+  handleLeave = () => {
     this.setState({
       isHovered: false
     });
   }
-  handleClick(i){
+  handleClick = () => {
     this.setState({
       isClicked: !this.state.isClicked,
-      isWhatClicked: i
     });
   }
-  className=this.className;
-  render(){
-    return(
+ 
+  render() {
+    return (
       <div  className="allDiv" >
-
         {this.state.isClicked ? (
           <div className="blue">
             <p>ada</p><p>adad</p>
@@ -42,12 +42,11 @@ class App extends React.Component {
           <div/>
           )
         }
-
           <div className="siteHead">
             <div className="headText">
               <div
-                onMouseEnter={this.handleEnter.bind(this)}
-                onMouseLeave={this.handleLeave.bind(this)}
+                onMouseEnter={this.handleEnter}
+                onMouseLeave={this.handleLeave}
                 className="langChange">
                 <div>
                   RU↓
@@ -66,8 +65,9 @@ class App extends React.Component {
                   )
                 }
               </div> 
+              <HeaderMenu/>
               <nav className="navHead">
-                <ul onClick={this.handleClick.bind(this)}>
+                <ul onClick={this.handleClick}>
                   <li>Специальности</li>
                   <li>Студентам</li>
                   <li>Сотрудникам</li>
@@ -78,7 +78,6 @@ class App extends React.Component {
                   <li>📞</li>
                 </ul>
               </nav>
-
             </div>
           </div>
           <div className="mainAreaOne">
